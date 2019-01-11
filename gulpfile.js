@@ -6,10 +6,18 @@ var concat = require("gulp-concat");
 var uglify = require("gulp-uglify");
 var rename = require("gulp-rename");
 var babel =require("gulp-babel")
+gulp.task("font",function(){
+	gulp.src("font/**")
+	.pipe(gulp.dest("dist/font"))
+})
 gulp.task("html",function(){
 	gulp.src("HTML/*.html")
 	.pipe(gulp.dest("dist"))
 	.pipe(connect.reload());
+})
+gulp.task("img",function(){
+	gulp.src("img/**")
+	.pipe(gulp.dest("dist/img"))
 })
 gulp.task("js",function(){
 	gulp.src("JS/*.js")
@@ -23,7 +31,7 @@ gulp.task("sass",function(){
 	.pipe(gulp.dest("dist/css"))
 })
 gulp.task("watch",function(){
-	gulp.watch(["HTML/*.html","style/*.scss","JS/*.js"],["html","sass","js"])
+	gulp.watch(["font/**","HTML/*.html","style/*.scss","JS/*.js","img/**"],["html","sass","js","img","font"])
 })
 
 gulp.task("server",function(){
