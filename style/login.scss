@@ -1,0 +1,133 @@
+$width:900px;
+$style:0 auto;
+body,div, dl, dt, em,font, form, h1, h2, h3, h4, h5, h6, html, i,img,label, legend, li, ol, p,small, span, strong, u, ul, var,a {
+    margin: 0;
+    padding: 0;
+}
+a{
+    color: #666;
+    text-decoration: none;
+}
+body{
+    display: block;
+    font-family: Arial,Verdana;
+    font-size: 12px;
+    background: #fff;
+}
+#header{
+    width:$width;
+    height: 80px;
+    margin:$style;
+    #logo{
+        position: relative;
+        width: 300px;
+        margin: 10px 0;
+        height: 60px;
+        float: left;
+        img{
+            width: 170px;
+        } 
+        b{
+            display: block;
+            width: 110px;
+            height: 40px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            font-size: 22px;
+            font-weight:400;
+        }
+    }
+    .q-link{
+          a{ 
+           display: block;
+           position: relative;
+           color: #999;
+           float: right;
+           top: 52px;
+           height: 18px;
+           width:136px;
+           .icon-liaotian{
+            width: 18px;
+            height: 14px;
+            color: red;
+            font-size: 12px;  
+           }           
+       }                                  
+    }
+}
+#content{    
+    .tips{
+        background: #fff8f0;
+        width: 100%;
+        height: 20px;    
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+    .login{
+        background: url(../img/l-bj.gif);
+        height: 475px;
+        .form{
+            height: 438px;
+            width: $width;
+            margin: $style;
+            .loginform{
+                position: relative;
+                float: right;
+                margin-top: 10px;
+                width: 346px;
+            .formtop{
+                    background: #fff8f0;
+                    width: 100%;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    text-align: center;
+                    .p{
+                        vertical-align: middle;
+                        color: #999;
+                        font-size: 12px;
+                        display: inline-block
+                    }
+                } 
+            .tab{
+                height: 18px;
+                font-size: 18px;        
+                text-align: center;
+                line-height: 18px;
+                padding: 18.5px 0;
+                border-bottom: 1px solid #f4f4f4;
+                position: absolute;
+                top: 36px;
+                background: #fff;
+                display: block;
+                z-index: 2px;
+                a{
+                    display: inline-block;
+                    height: 18px;
+                    width:170px;
+                    border-right: 1px solid #cecece;
+                }
+                .tagstyle{
+                    font-weight: 700;
+                    color: #e4393c
+                }
+                & a:last-child{
+                    border: none;
+                }
+                 & a:first-child{
+                        font-weight: 700;
+                        color: #e4393c
+                }
+            } 
+            #container{
+                top:36px;
+                position: absolute;
+                width: 306px;
+                padding: 20px 18px 20px 20px;
+                text-align: center;
+            }  
+            }
+        }
+    }
+}
