@@ -1,23 +1,40 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<link rel="stylesheet" type="text/css" href="font/iconfont.css"/>
-		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<link rel="stylesheet" type="text/css" href="font/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/login.css" />
 		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/login.js" type="text/javascript" charset="utf-8"></script>
+
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.group {
+				margin: 10px 0;
+			}
+			
+			.grouplast {
+				margin: 10px 0;
+				width: 278px;
+				background: red;
+				border: none
+			}
+		</style>
 	</head>
+
 	<body>
-		<div id = "header">
+		<div id="header">
 			<div id="logo">
 				<a href="index.html">
 					<img src="../img/logob.png" />
 				</a>
-				<b>欢迎登录 你好</b>
+				<b>欢迎登录</b>
 			</div>
 			<div class="q-link">
-				<a  href="https://surveys.jd.com/index.php?r=survey/index/sid/568245/lang/zh-Hans">
+				<a href="https://surveys.jd.com/index.php?r=survey/index/sid/568245/lang/zh-Hans">
 					<span class="iconfont icon-liaotian"></span>
 					<b>登录页面，调查问卷</b>
 				</a>
@@ -35,18 +52,99 @@
 				<div class="form">
 					<div class="loginform">
 						<div class="formtop">
-						<p>京东不会以任何理由要求您转账汇款，谨防诈骗。</p>	
+							<p>京东不会以任何理由要求您转账汇款，谨防诈骗。</p>
 						</div>
 						<div class="tab">
 							<a href="#" class="tagstyle">扫码登录</a>
 							<a href="#">账户登录</a>
 						</div>
 						<div id="container">
-							<div id="text"></div>
+							<div class="text">
+								<div class="img">
+									<div class="img1">
+										<img src="../img/show.png" />
+									</div>
+									<div class="img2">
+										<img src="../img/saoyisao.png" />
+									</div>
+									<ul>
+										<li><span>打开</span><i>手机京东</i></li>
+										<li>扫描二维码</li>
+									</ul>
+									<ul class="list">
+										<li>免输入</li>
+										<li>更快</li>
+										<li>更安全</li>
+									</ul>
+
+									<div class="login1">
+										<div class="col-lg-12">
+											<div class="input-group group">
+												<span class="input-group-addon" id="basic-addon1"><i class="iconfont icon-huiyuan"></i></span>
+												<input type="text" class="form-control" placeholder="邮箱/用户名/已验证手机" aria-describedby="basic-addon1">
+											</div>
+											<div class="input-group group">
+												<span class="input-group-addon" id="basic-addon1"><i class="iconfont icon-bianji"></i></span>
+												<input type="text" class="form-control" placeholder="密码" aria-describedby="basic-addon1">
+											</div>
+											<a href="mima.html">忘记密码</a>
+											<button class="btn btn-primary grouplast">登录</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="last">
+								<ul>
+									<li>
+										<a href=""><img src="../img/qq (1).png"/>qq&nbsp;&nbsp;&nbsp;&nbsp;|</a>
+										<a href=""><img src="../img/weixin.png"/>微信</a>
+									</li>
+									<li>
+										<a href=""><span>&gt;</span>立即注册</a>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+			
+				 <!-- 下面版权部分 -->
+  <div class="copyright">
+   <div class="w">
+    <p>
+     <a href="#">关于我们</a>
+     <span>|</span>
+     <a href="#">关于我们</a>
+     <span>|</span>
+     <a href="#">关于我们</a>
+     <span>|</span>
+     <a href="#">关于我们</a>
+     <span>|</span>
+     <a href="#">关于我们</a>
+     <span>|</span>
+     <a href="#">关于我们</a>
+     <span>|</span>
+     <a href="#">关于我们</a>
+     <span>|</span>
+     <a href="#">关于我们</a>
+     <span>|</span>
+     <a href="#">关于我们</a>
+     <span>|</span>
+     <a href="#">关于我们</a>
+     <span>|</span>
+     <a href="#">关于我们</a>
+     <span>|</span>
+     <a href="#">关于我们</a>
+     <span>|</span>
+     <a href="#">关于我们</a>
+    </p>
+  
+    <p>
+     Copyright @ 2014-2017 京东JD.com版权所有
+    </p>
+			</div>
+			<script src="js/login.js" type="text/javascript" charset="utf-8"></script>
 	</body>
+
 </html>

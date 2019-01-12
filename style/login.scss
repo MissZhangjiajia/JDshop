@@ -8,6 +8,9 @@ a{
     color: #666;
     text-decoration: none;
 }
+li{
+    list-style: none;
+}
 body{
     display: block;
     font-family: Arial,Verdana;
@@ -60,7 +63,7 @@ body{
     .tips{
         background: #fff8f0;
         width: 100%;
-        height: 20px;    
+        height: 40px;    
         padding-top: 10px;
         padding-bottom: 10px;
         text-align: center;
@@ -83,7 +86,7 @@ body{
                     padding-top: 10px;
                     padding-bottom: 10px;
                     text-align: center;
-                    .p{
+                    p{
                         vertical-align: middle;
                         color: #999;
                         font-size: 12px;
@@ -91,7 +94,7 @@ body{
                     }
                 } 
             .tab{
-                height: 18px;
+                height: 54px;
                 font-size: 18px;        
                 text-align: center;
                 line-height: 18px;
@@ -101,7 +104,7 @@ body{
                 top: 36px;
                 background: #fff;
                 display: block;
-                z-index: 2px;
+                z-index: 2;
                 a{
                     display: inline-block;
                     height: 18px;
@@ -110,24 +113,141 @@ body{
                 }
                 .tagstyle{
                     font-weight: 700;
-                    color: #e4393c
+                    color: #e4393c;
+                    text-decoration: none;
                 }
                 & a:last-child{
                     border: none;
                 }
-                 & a:first-child{
-                        font-weight: 700;
-                        color: #e4393c
-                }
+               
             } 
             #container{
+                background: #fff;
                 top:36px;
                 position: absolute;
-                width: 306px;
+                width: 345px;
+                
                 padding: 20px 18px 20px 20px;
                 text-align: center;
+               & .text{
+                    height: 243px; 
+                    .img{
+                        position: relative;
+                        height: 168px;
+                        margin-top:55px;
+                        display: block;
+                        .img1{
+                          border: 1px solid #f4f4f4;
+                            padding: 8px;
+                            width: 171px;
+                            position: absolute;
+                            left:64px;
+                        }
+                         .img2{
+                          height: 165px;
+                          position: absolute;
+                          display:none; 
+                        }
+                        ul{
+                           position: absolute;
+                           text-align: center;
+                           padding: 15px 65px;
+                           width: 305px;
+                           top: 165px;
+                           li{
+                               float: left;
+                               width: 50%;
+                             i{
+                                 color: red;
+                                 font-style: normal;
+                             }  
+                           }
+                        }
+                        .list{
+                            width: 266px;
+                            height: 25px;
+                            line-height: 25px;
+                            margin-left: 20px;
+                           position: absolute;
+                           top:196px;
+                          padding: 0 10px;
+                          li{
+                              width: 33%;
+                          }  
+                        }
+                         .login1{
+                         display: none;
+                         height: 168px;
+                         width:320px;
+                         position: absolute;
+                         left: 0px;
+                         top:0;
+                         a{
+                             float: right;
+                             display: block;
+                             margin-top: 10px;
+                             margin-bottom: 10px;
+                         }
+                    }
+                    }
+                   
+                }
+                .last{
+                    width: 345px;
+                    position: absolute;
+                    left: 0px;
+                    padding: 0 20px;                   
+                    line-height: 50px;
+                    border-top: 1px solid #f4f4f4;
+                    height: auto;
+                    background-color: #fcfcfc;
+                    li{
+                        float: left;
+                         a{ 
+                             display: inline-block;
+                             width: 60px; 
+                            img{
+                                width: 18px;
+                                height: 18px;
+                                margin-right: 5px;
+                            }
+                        } 
+                    }
+                    li:last-child{
+                        float: right;
+                       
+                        a{
+                             width:110px;
+                            //color: #b61d1d;
+                            span{
+                                
+                                display: inline-block;
+                                background: #b61d1d;
+                                color: white;
+                                width: 20px;
+                                height:20px;
+                                text-align: center;
+                                line-height: 20px;
+                                border-radius: 50%;
+                                margin-right: 5px;
+                                margin-top: 15px;
+                            }
+                        }
+                    }
+                }
             }  
             }
         }
     }
+}
+.copyright p {
+ margin-top: 20px;
+ margin-bottom: 9px;
+ text-align: center;
+ a{
+    color: rgb(102, 102, 102);
+    text-align: center;
+    font-size: 13px; 
+     margin: 0 9px;
+ }
 }
