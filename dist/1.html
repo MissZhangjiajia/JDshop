@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>滑动拼图验证码</title>
+  <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+  <style>
+  	body, div, dl, dt, em, font, form, h1, h2, h3, h4, h5, h6, html, i, img, label, legend, li, ol, p, small, span, strong, u, ul, var, a { margin: 0; padding: 0; }
+
+a { color: #666; text-decoration: none; }
+
+li { list-style: none; }
+
+body, html { height: 100%; width: 100%; font-size: 14px; }
+
+.header {
+	 height: 110px; 
+	 box-shadow: 0px 9px 8px -7px #cecece; }
+
+.header .top {
+	 height: 76px;
+	 width: 1210px; 
+	 padding-top: 28px;
+	 margin: 0 auto; 
+  }
+
+.header .top #logo { position: relative; width: 300px;}
+.header .top #logo a{
+	margin-left: 0;
+}
+.header .top #logo img { height: 50px; width: 170px; }
+
+.top #logo b { display: block; position: absolute; right: 0; bottom: 0; font-size: 22px; font-weight: 400; }
+
+    .container {
+    	position: relative;
+    	padding:35px ;
+      width: 310px;
+      margin: 100px auto;
+      border: 1px solid #CECECE;
+      box-shadow: 0px 0px 4px 4px #CECECE;
+    }
+    .container .tip{
+    	position: absolute;
+    	z-index: 5;
+    	top:10px
+    }
+    input {
+      display: block;
+      width: 290px;
+      line-height: 40px;
+      margin: 10px 0;
+      padding: 0 10px;
+      outline: none;
+      border:1px solid #c8cccf;
+      border-radius: 4px;
+      color:#6a6f77;
+    }
+    #msg {
+      width: 100%;
+      line-height: 40px;
+      font-size: 14px;
+      text-align: center;
+    }
+    a:link,a:visited,a:hover,a:active {
+      margin-left: 100px;
+      color: #0366D6;
+    }
+		.end{			
+      width: 385px;
+   		position: absolute;
+   		top:525px;
+   		left:519px;
+			height: 40px;
+			border: 1px solid #CECECE;
+			line-height: 40px;
+			text-align: center;
+			color: #fff;
+			background: red;
+			
+		}
+  </style>
+</head>
+<body>
+
+
+	<div class="header">
+		<div class="top">
+			<div id="logo">
+				<a href="index.html">
+					<img src="../img/logob.png" />
+				</a>
+				<b>欢迎注册</b>
+			</div>
+			
+		</div>
+		</div>
+		<div class="container">
+  <span class="tip">完成拼图认证</span>
+  <div id="captcha"></div>
+  <div id="msg"></div>
+</div>
+<div class="end">下一步</div>
+<script>
+if (!window.jigsaw) {
+  document.write('<script src="js/jigsaw.min.js"><\/script>')
+}
+</script>
+<script>
+  jigsaw.init({
+    el: document.getElementById('captcha'),
+    onSuccess: function() {
+      document.getElementById('msg').innerHTML = '拼接成功！'
+      $.get("http://47.104.244.134:8080/username.do",{username:"15737892354"},function(data){
+					if(data.code==0){
+						alert("该用户已注册，请直接登录")
+						location.href="http://localhost:8080/login.html"
+					}else{
+						      location.href="http://localhost:8080/register.html"
+					}
+					
+				})
+    },
+    onFail: cleanMsg,
+    onRefresh: cleanMsg
+  })
+  function cleanMsg() {
+    document.getElementById('msg').innerHTML = ''
+  }
+</script>
+</body>
+</html>

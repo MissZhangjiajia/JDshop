@@ -12,6 +12,7 @@ body,div, dl, dt, em,font, form, h1, h2, h3, h4, h5, h6, html, i,img,label, lege
    body,html{
        height: 100%;
        width: 100%;
+       font-size: 14px;
    }
     .header{
         height: 110px;
@@ -93,7 +94,96 @@ body,div, dl, dt, em,font, form, h1, h2, h3, h4, h5, h6, html, i,img,label, lege
         }
         .form{
             height: 302px;
-            
+            margin-top:20px ;
+            .phonelist{
+                position: relative;
+                height: 52px;
+                position: relative;
+                z-index: 2;
+                margin:18px 0;
+                border: 1px solid #CECECE; 
+                .text{
+                    float: left;
+                    border: none;
+                    height: 50px;
+                    line-height: 50px;
+                    padding-left: 20px;
+                }
+                .btn{
+                    float: left;
+                    width:107px;
+                    height: 50px;
+                    border: none;
+                    padding: 0;
+                    border-radius:0;
+                    line-height: 50px;
+                    padding-left: 20px;
+                    border-right: 1px solid #CECECE;
+                }
+                .search{                  
+                    display: none;
+                    position: absolute;
+                    top: 60px;
+                    background-color: #fff;
+                    z-index: -1;
+                    width: 344px;
+                    height: 303px;
+                    left: 0;
+                    padding-left: 15px;
+                    box-shadow: 0px 0px 4px 4px #CECECE;
+                    .jiantou1{
+                        color: #CECECE;
+                        position: absolute;
+                        top:-15px;
+                        left:30px;
+                    }
+                    .sousuo{
+                        height: 42px;
+                        width:316px;
+                        padding-left: 35px;
+                        margin: 5px 0;
+                        line-height: 42px;
+                        background: url(../img/fangdajing.png) no-repeat 10px 13px;
+                        background-size: 16px 16px;
+                    }
+                    .check{
+                        width: 330px;
+                        height: 40px;
+                        span{
+                            color: red;   
+                        }
+                        
+                    }
+                    .country{                       
+                            height: 185px;
+                            overflow: auto;
+                        li{
+                            margin: 10px;
+                        }
+                    }
+                }
+                .tip1{
+                    display: none;
+                    position: absolute;
+                    top:52px;
+                    i{
+                        color: orange;
+                    }
+                }
+            }
+            .renzheng{
+                width: 400px;
+                height: 54px;
+                margin: 30px 0;
+                border: 1px solid #CECECE;
+                line-height: 54px;
+                text-align: center;
+                
+            }
+             .renzheng:last-child{
+                 background: red;
+                 color: #fff;
+             }
         }
     }
     
@@ -150,7 +240,7 @@ body,div, dl, dt, em,font, form, h1, h2, h3, h4, h5, h6, html, i,img,label, lege
             line-height: 20px; 
             }                       
         }
-        .btn{
+        .btn2{
             height: 54px;
             position: relative;
             padding-left: 250px;
