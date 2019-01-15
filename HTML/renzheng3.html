@@ -8,7 +8,18 @@
 		<link rel="stylesheet" type="text/css" href="css/regist.css" />
 		<link rel="stylesheet" type="text/css" href="css/renzheng2.css"/>
 		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
-		
+		<style type="text/css">
+			.form .renzheng span{
+				display: block;
+	            height: 52px;
+	            width: 120px;
+	            text-align: right;
+	            padding-right: 0;
+	            float: right;
+	
+				
+			}
+		</style>
 	</head>
 	<body>
 	<div class="header">
@@ -46,24 +57,35 @@
 		<div class="form">	
 			<div class="renzheng" id="rz">
 			<div class="yanzheng">
-			用户名<input type="text" placeholder="你的账户和登录名"/>
-			</div>		
+			用户名<input class="user" type="text" placeholder="你的账户和登录名"/>
+			</div>
+			<span id="use"></span>
 			</div>
 			<div class="renzheng" id="rz">
 			<div class="yanzheng">
-			设置密码<input type="text" placeholder="建议两种或两种以上字符组合"/>
-			</div>		
+			性别<input type="text" class="sex" placeholder="男/女"/>
+			
+			</div>	
+			<span id="sex"></span>
+			</div>
+			<div class="renzheng" id="rz">
+			<div class="yanzheng">
+			设置密码<input type="password" class="mima1" placeholder="建议两种或两种以上字符组合"/>
+			</div>	
+			<span id="mima1"></span>
 			</div>
 			
 			<div class="renzheng" id="rz">
 			<div class="yanzheng">
-			确认密码<input type="text" placeholder="请再次输入密码"/>
-			</div>		
+			确认密码<input type="password" class="mima2" placeholder="请再次输入密码"/>
+			</div>
+			<span id="mima2"></span>
 			</div>
 			<div class="renzheng" id="rz">
 			<div class="yanzheng">
-			邮箱验证<input type="text" placeholder="请输入邮箱"/>
-			</div>		
+			邮箱验证<input class="email"  type="email" placeholder="请输入邮箱" required="required"/>
+			</div>
+			<span id="email"></span>
 			</div>
 			
 			<div class="renzheng" id="rz">
@@ -72,11 +94,81 @@
 			</div>
 			<span class="time">获取验证码</span>
 			</div>
-		
-			<div class="renzheng" id="next1">下一步</div>
-			
+			<div class="renzheng" id="next1" style="cursor:pointer">下一步</div>	
 		</div>
-		
+		<script type="text/javascript">
+			$(function(){
+				$(".user").blur(function(){
+					 $.get("http://47.104.244.134:8080/username.do",{username:$(this).val()},function(data){
+					if(data.code==0){
+						$("#use").html("该用户名重复")
+						console.log($(this).parent().next())
+					}else{
+						$("#use").empty()
+					}
+					
+				})
+				})
+				$(".sex").blur(function(){
+					 if($(this).val()=="女"||$(this).val()=="男"){
+					 	$("#sex").html("")
+					 }else{
+					 	$("#sex").html("格式不正确")
+					 }
+				})
+				$(".mima2").blur(function(){
+					 if($(this).val()==$(".mima1").val()){
+					 	$("#mima2").html("")
+					 }else{
+					 	$("#mima2").html("请重新输入")
+					 }
+				})
+				$(".email").blur(function(){
+					 $.get("http://47.104.244.134:8080/useremail.do",{email:$(this).val()},function(data){
+					if(data.code==0){
+						$("#email").html("邮箱重复")					
+					}else{
+						$("#email").html("")
+					}
+					
+				})
+				})
+				var num=120;
+				$(".time").click(
+					function(){
+				var timer=setInterval(
+					function() {
+						num--;
+						$(".time").html(num+"s后重新获取")
+					if(num<=0){
+						clearInterval(timer);
+						$(".time").html("请重新获取验证码")
+					}
+					},1000)
+				$("#next1").click(function(){
+				
+					location.href="http://localhost:8080/renzheng4.html"
+				})
+				});
+				$("#next1").click(function(){
+					$.post("http://47.104.244.134:8080/usersave.do",
+					{
+					"username":$(".user").val(),
+					"password":$(".mima1").val(),
+					"email":$(".email").val(),
+					"sex":$(".sex").val()
+					
+					},
+					function(data){
+					if(data.code==0){
+						alert("恭喜您注册成功");
+					location.href = "http://localhost:8080/index.html";
+						}
+					}
+				);	
+				})
+			})
+		</script>
 		
 	</body>
 </html>

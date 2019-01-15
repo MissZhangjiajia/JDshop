@@ -32,7 +32,24 @@ body, html { height: 100%; width: 100%; font-size: 14px; }
 .header .top #logo img { height: 50px; width: 170px; }
 
 .top #logo b { display: block; position: absolute; right: 0; bottom: 0; font-size: 22px; font-weight: 400; }
-
+#phone{
+	width: 450px;
+	height: 42px;
+	padding-top: 60px;
+	margin: 10px auto;
+	padding-left:50px;
+}
+#phone b{
+	display: block;
+	height: 42px;
+	float: left;
+	line-height: 42px;
+	font-size: 20px;
+}
+#phone .phone{
+	float: left;
+	margin: 0;
+}
     .container {
     	position: relative;
     	padding:35px ;
@@ -70,8 +87,8 @@ body, html { height: 100%; width: 100%; font-size: 14px; }
 		.end{			
       width: 385px;
    		position: absolute;
-   		top:525px;
-   		left:519px;
+   		top:585px;
+   		left:443px;
 			height: 40px;
 			border: 1px solid #CECECE;
 			line-height: 40px;
@@ -84,7 +101,7 @@ body, html { height: 100%; width: 100%; font-size: 14px; }
 </head>
 <body>
 
-
+	
 	<div class="header">
 		<div class="top">
 			<div id="logo">
@@ -95,6 +112,9 @@ body, html { height: 100%; width: 100%; font-size: 14px; }
 			</div>
 			
 		</div>
+		</div>
+		<div id="phone">
+			<b>手机号</b><input type="text" class="phone"/>
 		</div>
 		<div class="container">
   <span class="tip">完成拼图认证</span>
@@ -112,7 +132,7 @@ if (!window.jigsaw) {
     el: document.getElementById('captcha'),
     onSuccess: function() {
       document.getElementById('msg').innerHTML = '拼接成功！'
-      $.get("http://47.104.244.134:8080/username.do",{username:"15737892354"},function(data){
+      $.get("http://47.104.244.134:8080/username.do",{username:$(".phone").val()},function(data){
 					if(data.code==0){
 						alert("该用户已注册，请直接登录")
 						location.href="http://localhost:8080/login.html"

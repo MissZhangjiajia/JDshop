@@ -1,6 +1,541 @@
-body{
-    padding: 0;
-    margin: 0;
-    color:red;
+body,p,ul,li,ol,dl,dt,dd,h1,h2,h3,h4,h5,h6,input,textarea{
+ margin: 0;
+ padding: 0;
 }
+a {
+ text-decoration: none;
+ color: #999;
+}
+li {
+ list-style: none;
+}
+img,input {
+ outline: none;
+ vertical-align: middle;
+ border: 0;
+}
+body {
+ font-size: 12px;
+ font-family: "微软雅黑";
+ color: #999;
+ background-color: #f6f6f6;
+}
+table {
+ border-collapse: collapse;
+}
+
+/*放置一些公共的样式*/
+.clear:after {
+ display: block;
+ content: "";
+ clear: both;
+}
+/*IE兼容*/
+.clear {
+ zoom: 1;
+
+}
+.fl {
+ float: left;
+}
+.fr {
+ float: right;
+}
+.w {
+ width: 1190px;
+ margin: 0 auto;
+}
+
+/*顶部广告样式开始*/
+#head_banner {
+    display: block;
+     height: 80px;
+     width: 1200px;
+     margin: 0 auto;
+     #w {
+     position: relative;
+        
+        #close {
+         display: block;
+         width: 20px;
+         height: 20px;
+         font-size: 13px;
+         color:#fff;
+         border: 1px solid #fff;
+         border-radius: 50%;
+         line-height: 20px;
+         text-align: center;
+         position: absolute;
+         top: 5px;
+         right: 15px;
+         &:hover {
+             color: rgba(255,255,255,0.8);
+             background-color: rgba(0,0,0,0.8);
+            }
+        }
+    }
+}
+/*顶部广告样式结束*/
+/*头部导航部分开始*/
+.head_nav {
+ height: 30px;
+ background-color: #e3e4e5;
+ border-bottom: 1px #ddd solid;
+}
+.head_nav .w ul.fl li {
+ height: 30px;
+ line-height: 30px;
+ text-align: center;
+ border: 1px #e3e4e5 solid;
+ border-bottom: none;
+}
+.head_nav .w ul.fl li:hover{
+ background-color: #fff;
+ border: 1px #e3e4e5 solid;
+ border-bottom: none;
+}
+.head_nav .w ul.fl li .iconfont {
+ color: #f10215;
+}
+
+.head_nav .w ul.fr li {
+   
+ padding: 0 6px;
+ line-height: 30px;
+ float: left;
+}
+.head_nav .w ul.fr li a.red {
+ color: red;
+}
+.head_nav .w ul.fr li a:hover{
+ color: #f10215;
+}
+.head_nav .w ul.fr li .iconfont {
+ font-size: 9px;
+}
+.head_nav .w ul.fr li.line {
+ width: 1px;
+ height: 10px;
+ padding: 0;   
+ background-color: #cccccc; 
+ margin: 11px 6px 0 6px;
+}
+
+.head_nav .w .fr li .public {
+ border: 1px #e3e4e5 solid;
+ border-bottom: none;
+ height: 29px;
+}
+.head_nav .w .fr .public:hover a{
+    color: #888;
+}
+.head_nav .w .fr .public:hover {
+     background-color: #fff;
+     border-bottom: none;
+     color:#888;
+}
+
+/*小三角样式*/
+.head_nav .w .fr li.mobile {
+    position: relative;
+    &:hover{
+        span{
+           color: #f00; 
+        }
+        .erweima{
+            display: block;
+        }
+    }
+}
+.head_nav .w .fr li.mobile .erweima:before {
+ display: block;
+ content: "";
+ width: 0;
+ height: 0;
+ border-top: 8px transparent solid;
+ border-right: 8px transparent solid;
+ border-bottom: 8px #fff solid;
+ border-left: 8px transparent solid;
+ position: absolute;
+ top: -15px;
+ left:110px;
+}
+ dl{
+     float: left;
+     padding-left: 20px;
+     height: 150px;
+     border-right: 1px solid #CECECE;
+     dt{
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 6px;
+        color: #666;
+        line-height: 24px;
+     }
+     dd{
+         height: 126px;
+         .item{
+         width: 86px;
+         height: 24px;
+         line-height: 24px;
+         color: #999;
+         float: left;
+         a:hover{
+             color: #f00;
+         }
+         }
+     }
+ }
+ //我的京东导航
+#myjd{
+     position: relative;
+     &:hover{
+         .myjd{
+             display: block;
+         }
+     }
+     .myjd{
+        position: absolute;
+        top: 30px;        
+        width: 265px;
+        padding: 5px 0 5px 15px;
+        left: 0;
+        background: #fff;
+        border: 1px solid #ddd;
+        z-index: 20;
+        height: 143px;
+        display: none;
+        .fore1{
+            height: 90px;
+            border-bottom: 1px solid #CECECE;
+        }
+        .item{
+            width:120px;
+            float: left;
+            a:hover{
+             color: #f00;
+         }
+        }
+        .fore2{
+            height: 53px; 
+        }
+     }
+     dl{
+         border-right:none;
+     }
+ }    
+ 
+ 
+ 
+ //客户服务导航
+ #fuwu{
+     position: relative;
+     &:hover{
+         .fuwu{
+             display: block;
+         }
+     }
+     .fuwu{
+        position: absolute;
+        top: 30px;        
+        width: 170px;
+        right: 1px;
+        padding: 10px 0;
+        background: #fff;
+        border: 1px solid #ddd;
+        z-index: 20;
+        height: 227px;
+        display: none;
+        .kehu{
+            height: 127px;
+            border-bottom: 1px solid #CECECE;
+        }
+        .item{
+            width: 70px;
+            a:hover{
+             color: #f00;
+         }
+        }
+        .shanghu{
+            height: 100px; 
+        }
+     }
+     dl{
+         border-right:none;
+     }
+ }
+//网站导航
+#wangzhan{
+    &:hover{
+        .wangzhan{
+            display: block;
+        }
+    }   
+    position: relative;
+    .wangzhan{
+        display: none;
+         width: 1208px;
+         position: absolute;
+         left: -1048px;
+         top: 30px;
+         z-index: 20;
+         background: #fff;
+         border: 1px solid #CECECE;
+         height: 150px;
+         padding: 20px 0;  
+         .fore1{
+             width:347px ;
+         }  
+         .fore2{
+             width: 259px;
+         }
+          .fore3{
+             width: 259px;
+         } 
+         .fore4{
+             width: 259px;
+             border: none;
+         }           
+    }
+}
+/*二维码样式*/
+.head_nav .w .fr li.mobile .erweima {
+     display: none;
+     position: absolute;
+     left: -100px;
+     top: 31px;
+     z-index: 20;
+     background: #fff;
+     border: 1px solid #CECECE;
+     dl{
+        width: 200px;
+        height:90px;
+        border-bottom: 1px solid #CECECE; 
+            dt{
+                float: left;
+                padding: 5px;
+                img{
+                    height: 80px;
+                    width: 80px;
+            }
+            dd{
+                width:110px ;
+                float: left;
+                p{
+                   color: #f00;
+                }
+            }
+        }
+     }
+}
+/*头部导航部分结束*/ 
+/*头部搜索区域开始*/
+.head_search {
+ height: 140px;
+ background: #fff;
+}
+.head_search .w {
+ position: relative;
+}
+
+.head_search .w .logo .iconfont{font-size: 30px;color: #F10215;}
+.head_search .w .logo {
+ display: block;
+ width: 350px;
+ height: 56px;
+ float: left;
+ padding-top:25px ;
+ img{
+     height: 54px;
+     width: 213px;
+     float: left;
+ }
+ .weizhi{
+     float: left;
+     height: 26px;
+     width:90px;
+     margin-left: 30px; 
+     padding-top: 12px;
+     span{
+         float: left;
+     }  
+     .dizhi{
+         position: relative;
+         float: right;
+         width: 48px;
+         height: 26px;
+         margin-left: 6px;
+         color: #F10215;
+         font-size: 14px;
+         line-height: 25px;
+         padding-left: 6px;
+         border-bottom: 2px solid #F10215;
+          &:hover{
+                 .list{
+                     display: block;
+                 }
+             }
+         span{
+             float: right;
+            
+         }
+         .list{
+             display: none;
+             color: #666;
+             width: 301px;
+             position: absolute;
+             padding-left: 20px;
+             left:-30px;
+             top: 28px;
+             background: #fff;
+             border: 1px solid #CECECE;
+             .wai{
+                 height: 200px;
+             border-bottom: 1px solid #CECECE;
+             }
+             li{
+                float: left;
+                width: 60px;
+                padding: 2px 0;
+             }
+             ul:first-child {
+                  border-top: 1px solid #CECECE;
+              }
+             ul:last-child {
+                 li{
+                     width: 145px;
+                    
+                 }
+             }
+         }
+     }
+ }
+}
+.head_search .w .search {
+ width: 450px;
+ height: 33px;
+ float: left;
+ margin-top: 25px;
+ margin-left: 80px;
+ border: 1px orange solid;
+ position: relative;
+}
+.head_search .w .search .text {
+ width: 370px;
+ height: 33px;
+ float: left;
+ text-indent: 4px;
+}
+.head_search .w .search .btn {
+ width: 80px;
+ height: 33px;
+ background-color: orange;
+ float: left;
+ color: #fff;
+}
+.head_search .w .search .iconfont {
+ position: absolute;
+ top: 7px;
+    right: 13px;
+ color: #fff;
+ font-size: 20px;
+}
+.head_search .w .shopcart {
+ float: left;
+ width: 95px;
+ height: 33px;
+ line-height: 33px;
+ text-align: center;
+ font-size: 12px;
+ color: #f10215;
+ background-color: #efefef;
+ border: 1px #e3e4e5 solid;
+ margin-top: 25px;
+ margin-left: 35px;
+ position: relative;
+}
+.head_search .w .shopcart em {
+ display: block;
+ font-style: normal;
+ width: 14px;
+ height: 14px;
+ color: #fff;
+ line-height: 14px;
+ text-align: center;
+ border-radius: 50%;
+ background-color: #f10215;
+ position: absolute;
+ top: 0px;
+ right: 0px;
+}
+#youhui{
+    width: 120px;
+    &:hover{
+        .pic2{
+            display: block;
+        }
+    }
+    .pic2{
+        display:none;
+        width: 120px;
+        height: 120px;
+       img{ 
+        width: 109px;
+        height: 109px; 
+        border: 1px solid #CECECE;
+        }
+    }
+    img{
+        float: left;
+        width: 25px;
+        height: 25px;
+        padding: 5px;
+    }
+}
+/*热词搜索样式*/
+.head_search .w .hotwords {
+ float: left;
+ margin-left: 82px;
+ margin-top: 10px;
+}
+.head_search .w .hotwords ul li {
+ float: left;
+ font: 12px/12px "微软雅黑";
+ margin-right: 10px;
+}
+.head_search .w .hotwords a:hover {
+ color: red;
+}
+/*主导航栏样式*/
+.head_search .w .main_nav {
+ float: left;
+ margin-left: 230px;
+ margin-top: 31px;
+}
+.head_search .w .main_nav ul li {
+ float: left;
+ font: 700 16px/16px "微软雅黑";
+ margin-right: 30px;
+}
+.head_search .w .main_nav ul li.line {
+ width: 1px;
+ height: 10px;
+ background-color: #ccc;
+ margin: 3px 20px 0 -10px;
+}
+.head_search .w .main_nav ul li a {
+ color: #555;
+}
+.head_search .w .main_nav ul li a:hover {
+ color: red;
+}
+
+/*小广告*/
+.head_search .w .small_banner {
+ margin-top: 12px;
+ display: block;
+ float: right;
+}
+
+/*头部搜索区域结束*/
 
