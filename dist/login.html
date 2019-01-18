@@ -7,9 +7,8 @@
 		<link rel="stylesheet" type="text/css" href="font/iconfont.css" />
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 		<link rel="stylesheet" type="text/css" href="css/login.css" />
-		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
-
 		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
 		<style type="text/css">
 			.group {
@@ -81,11 +80,11 @@
 										<div class="col-lg-12">
 											<div class="input-group group">
 												<span class="input-group-addon" id="basic-addon1"><i class="iconfont icon-huiyuan"></i></span>
-												<input type="text" class="form-control" placeholder="邮箱/用户名/已验证手机" aria-describedby="basic-addon1">
+												<input type="text" class="form-control" placeholder="邮箱/用户名/已验证手机" aria-describedby="basic-addon1" id="user">
 											</div>
 											<div class="input-group group">
 												<span class="input-group-addon" id="basic-addon1"><i class="iconfont icon-bianji"></i></span>
-												<input type="text" class="form-control" placeholder="密码" aria-describedby="basic-addon1">
+												<input type="text" class="form-control" placeholder="密码" aria-describedby="basic-addon1" id="pas">
 											</div>
 											<a href="mima.html">忘记密码</a>
 											<button class="btn btn-primary grouplast">登录</button>
@@ -96,8 +95,8 @@
 							<div class="last">
 								<ul>
 									<li>
-										<a href="javascript:void(0)" onclick="window.location='//qq.jd.com/new/qq/login.aspx'+window.location.search;return false;" clstag="pageclick|keycount|login_pc_201804112|3" class="pdl"><img src="../img/qq (1).png"/>qq&nbsp;&nbsp;&nbsp;&nbsp;|</a>
-										<a href="javascript:void(0)" onclick="window.location='//qq.jd.com/new/wx/login.action'+window.location.search;return false;" clstag="pageclick|keycount|login_pc_201804112|4" class="pdl"><img src="../img/weixin.png"/>微信</a>
+										<a href="javascript:void(0)" onclick="window.location='//qq.jd.com/new/qq/login.aspx'+window.location.search;return false;" clstag="pageclick|keycount|login_pc_201804112|3" class="pdl"><img src="../img/qq (1).png" />qq&nbsp;&nbsp;&nbsp;&nbsp;|</a>
+										<a href="javascript:void(0)" onclick="window.location='//qq.jd.com/new/wx/login.action'+window.location.search;return false;" clstag="pageclick|keycount|login_pc_201804112|4" class="pdl"><img src="../img/weixin.png" />微信</a>
 									</li>
 									<li>
 										<a href="register.html"><span>&gt;</span>立即注册</a>
@@ -108,43 +107,43 @@
 					</div>
 				</div>
 			</div>
-			
-				 <!-- 下面版权部分 -->
-  <div class="copyright">
-   <div class="w">
-    <p>
-     <a href="#">关于我们</a>
-     <span>|</span>
-     <a href="#">关于我们</a>
-     <span>|</span>
-     <a href="#">关于我们</a>
-     <span>|</span>
-     <a href="#">关于我们</a>
-     <span>|</span>
-     <a href="#">关于我们</a>
-     <span>|</span>
-     <a href="#">关于我们</a>
-     <span>|</span>
-     <a href="#">关于我们</a>
-     <span>|</span>
-     <a href="#">关于我们</a>
-     <span>|</span>
-     <a href="#">关于我们</a>
-     <span>|</span>
-     <a href="#">关于我们</a>
-     <span>|</span>
-     <a href="#">关于我们</a>
-     <span>|</span>
-     <a href="#">关于我们</a>
-     <span>|</span>
-     <a href="#">关于我们</a>
-    </p>
-  
-    <p>
-     Copyright @ 2014-2017 京东JD.com版权所有
-    </p>
-			</div>
-			<script src="js/login.js" type="text/javascript" charset="utf-8"></script>
+
+			<!-- 下面版权部分 -->
+			<div class="copyright">
+				<div class="w">
+					<p>
+						<a href="#">关于我们</a>
+						<span>|</span>
+						<a href="#">关于我们</a>
+						<span>|</span>
+						<a href="#">关于我们</a>
+						<span>|</span>
+						<a href="#">关于我们</a>
+						<span>|</span>
+						<a href="#">关于我们</a>
+						<span>|</span>
+						<a href="#">关于我们</a>
+						<span>|</span>
+						<a href="#">关于我们</a>
+						<span>|</span>
+						<a href="#">关于我们</a>
+						<span>|</span>
+						<a href="#">关于我们</a>
+						<span>|</span>
+						<a href="#">关于我们</a>
+						<span>|</span>
+						<a href="#">关于我们</a>
+						<span>|</span>
+						<a href="#">关于我们</a>
+						<span>|</span>
+						<a href="#">关于我们</a>
+					</p>
+
+					<p>
+						Copyright @ 2014-2017 京东JD.com版权所有
+					</p>
+				</div>
+				<script src="js/login.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 
 </html>

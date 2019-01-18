@@ -26,5 +26,15 @@ $(function(){
    			$(".img1,.img2").hide();
    			$(".login1").css("background","#fff")
    		})
-   		
+   $(".btn").click(function(){	
+   $.post("http://47.104.244.134:8080/userlogin.do",{name:$("#user").val(),password:$("#pas").val()},function(data){
+   	$.cookie("token",data.data.token);
+   		if(data.code==0){
+   			console.log(data)
+   			alert("登录成功");
+   			location.href="index.html"
+   			
+   		}
+   })
+   	})	
 })
